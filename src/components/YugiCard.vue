@@ -1,6 +1,9 @@
 <script>
 export default {
     name: 'YugiCard',
+    props: {
+        cardInfo: Object
+    }
 }
 </script>
 
@@ -9,8 +12,8 @@ export default {
         <div class="image">
             <img src="https://images.ygoprodeck.com/images/cards_small/34541863.jpg" alt="">
         </div>
-        <h3 class="card-name">NOME CARTA</h3>
-        <p>ARCHETIPO CARTA</p>
+        <h3 class="card-name">{{ cardInfo.name }}</h3>
+        <p>{{ cardInfo.archetype }}</p>
     </div>
 </template>
 

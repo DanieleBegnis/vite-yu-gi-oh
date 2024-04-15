@@ -1,10 +1,16 @@
 <script>
+import { store } from '../store.js';
 import YugiCard from './YugiCard.vue';
 
 export default {
     name: 'AppMain',
     components: {
         YugiCard
+    },
+    data() {
+        return {
+            store
+        };
     }
 }
 </script>
@@ -13,14 +19,7 @@ export default {
     <section class="cards-list">
         <div class="container">
             <div class="yugi-cards">
-                <YugiCard></YugiCard>
-                <YugiCard></YugiCard>
-                <YugiCard></YugiCard>
-                <YugiCard></YugiCard>
-                <YugiCard></YugiCard>
-                <YugiCard></YugiCard>
-                <YugiCard></YugiCard>
-                <YugiCard></YugiCard>
+                <YugiCard  v-for="card in store.cards" :key="card.id" :cardInfo="card"></YugiCard>
             </div>
         </div>
     </section>
