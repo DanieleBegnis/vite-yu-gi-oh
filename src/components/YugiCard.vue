@@ -10,7 +10,7 @@ export default {
 <template>
     <div class="single-card">
         <div class="image">
-            <img src="https://images.ygoprodeck.com/images/cards_small/34541863.jpg" alt="">
+            <img :src="cardInfo.card_images[0].image_url" alt="">
         </div>
         <h3 class="card-name">{{ cardInfo.name }}</h3>
         <p>{{ cardInfo.archetype }}</p>
