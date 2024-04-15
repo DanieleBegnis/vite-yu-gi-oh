@@ -14,6 +14,13 @@ export default {
         <div class="container">
             <div class="yugi-cards">
                 <YugiCard></YugiCard>
+                <YugiCard></YugiCard>
+                <YugiCard></YugiCard>
+                <YugiCard></YugiCard>
+                <YugiCard></YugiCard>
+                <YugiCard></YugiCard>
+                <YugiCard></YugiCard>
+                <YugiCard></YugiCard>
             </div>
         </div>
     </section>
@@ -30,7 +37,8 @@ export default {
     margin: 0 auto;
     background-color: #fff;
     .yugi-cards {
-
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 </style>
