@@ -1,6 +1,11 @@
 <script>
+import YugiCard from './YugiCard.vue';
+
 export default {
     name: 'AppMain',
+    components: {
+        YugiCard
+    }
 }
 </script>
 
@@ -8,7 +13,7 @@ export default {
     <section class="cards-list">
         <div class="container">
             <div class="yugi-cards">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo, dolore eveniet dicta fugit inventore asperiores placeat veniam nihil! Voluptas corporis totam, recusandae aspernatur dicta facilis veniam ad eos repellat.
+                <YugiCard></YugiCard>
             </div>
         </div>
     </section>
