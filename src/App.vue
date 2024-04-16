@@ -33,6 +33,7 @@ export default {
       .then((response) => {
         store.cards = response.data.data;
       });
+      alert('ciao')
     },
     getArchetypeFromApi() {
       axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
