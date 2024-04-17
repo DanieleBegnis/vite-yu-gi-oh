@@ -14,7 +14,6 @@ export default {
 <template>
     <section class="app-search">
         <div class="container">
-            {{ store.searchedStatus }}
             <select @change="$emit('searchPerformed')" v-model="store.searchedStatus">
                 <option value="">Scegli l'Archetipo</option>
                 <option v-for="archetype in store.archetype" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
