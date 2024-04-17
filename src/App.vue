@@ -19,6 +19,7 @@ export default {
   },
   methods: {
     getCardsFromApi() {
+      console.log(store.searchedStatus)
       let apiUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
       const queryParams = {
         num: 20,
@@ -33,7 +34,6 @@ export default {
       .then((response) => {
         store.cards = response.data.data;
       });
-      alert('ciao')
     },
     getArchetypeFromApi() {
       axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
@@ -55,7 +55,8 @@ export default {
 
 <template>
   <AppHeader></AppHeader>
-  <CardSearcher @searchPerfomed="getCardsFromApi"></CardSearcher>
+
+  <CardSearcher @searchPerformed="getCardsFromApi"></CardSearcher>
   <AppMain></AppMain>
 </template>
 
